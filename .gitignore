@@ -4,3 +4,8 @@ cypress/downloads/
 cypress/screenshots/
 cypress/videos/
 node_modules/
+1-Testes-end-to-end-Cypress/cypress.env.json
+1-Testes-end-to-end-Cypress/cypress/downloads/
+1-Testes-end-to-end-Cypress/cypress/screenshots/
+1-Testes-end-to-end-Cypress/cypress/videos/
+1-Testes-end-to-end-Cypress/node_modules/
