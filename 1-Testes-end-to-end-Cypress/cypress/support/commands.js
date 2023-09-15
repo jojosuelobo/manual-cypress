@@ -18,3 +18,24 @@ Cypress.Commands.add('fillSignupFormAndSubmit', (email, password) => {
     cy.wait('@getNotes')
   })
 })
+
+Cypress.Commands.add('guiLogin', (
+/* Caso não seja passado nenhum valor na chamada do método,
+   os valores em Cypress.env serão atribuidos e usados na variáveis */
+  username = Cypress.env('USER_EMAIL'),
+  password = Cypress.env('USER_PASSWORD')
+) => {
+  cy.visit('/login')
+  cy.get('#email').type(username)
+  cy.get('#password').type((password), { log: false })
+  cy.contains('button', 'Login').click()
+  cy.contains('h1', 'Your Notes').should('be.visible')
+})
+
+Cypress.Commands.add('sessionLogin', (
+  username = Cypress.env('USER_EMAIL'),
+  password = Cypress.env('USER_PASSWORD')
+) => {
+  const login = () => cy.guiLogin(username, password)
+  cy.session(username, login)
+})
