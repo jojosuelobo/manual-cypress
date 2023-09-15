@@ -2,7 +2,7 @@
 
 Anotações dos cursos de Automação com Cypress do [Walmyr Filho - Talking About Testing](https://github.com/wlsf82)
 
-###1: [Testes end-to-end com Cypress](./1-Testes-end-to-end-Cypress/)
+### 1: Testes end-to-end com Cypress
 - Como testar recebimento de e-mails
 - Como proteger dados sensíveis
 - Como armazenar a sessão do usuário no cache para otimizar o processo de autenticação
