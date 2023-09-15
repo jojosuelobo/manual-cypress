@@ -2,4 +2,12 @@
 
 Anotações dos cursos de Automação com Cypress do [Walmyr Filho - Talking About Testing](https://github.com/wlsf82)
 
-1: [Testes end-to-end com Cypress](https://github.com/wlsf82/testes-e2e-com-cypress-v2)
+###1: [Testes end-to-end com Cypress](./1-Testes-end-to-end-Cypress/)
+- Como testar recebimento de e-mails
+- Como proteger dados sensíveis
+- Como armazenar a sessão do usuário no cache para otimizar o processo de autenticação
+- testes e2e para **Sign up**, **Login**, **CRUD**
+- upload de arquivos
+- interceptar requisições para tornar os testes mais robustos
+- Como testar a responsividade da aplicação
+- Cypress Cloud
