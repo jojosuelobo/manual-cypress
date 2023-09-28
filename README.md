@@ -11,3 +11,6 @@ Anotações dos cursos de Automação com Cypress do [Walmyr Filho - Talking Abo
 - interceptar requisições para tornar os testes mais robustos
 - Como testar a responsividade da aplicação
 - Cypress Cloud
+
+### 2: Cypress básico
+[Repositório do curso](https://github.com/wlsf82/cypress-basico-v2)
