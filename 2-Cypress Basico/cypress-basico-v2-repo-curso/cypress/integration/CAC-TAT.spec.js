@@ -8,6 +8,9 @@ describe('Central de Atendimento ao Cliente TAT', function () {
 
   it('Preenche campos obrigatórios e envia formulário', function () {
     const lorem = 'LONG TEXT lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem '
+
+    cy.clock()
+
     cy.get('[id="firstName"]').as('nome').type('Josue')
     cy.get('[id="lastName"]').as('sobrenome').type('Lobo')
     cy.get('[id="email"]').as('email').type('josuelobo@email.com')
@@ -16,6 +19,9 @@ describe('Central de Atendimento ao Cliente TAT', function () {
 
     cy.get('.success').should('be.visible')
     cy.contains('strong', 'Mensagem enviada com sucesso.')
+
+    cy.tick(3000)
+    cy.get('.success').should('not.be.visible')
   })
 
   it('exibe mensagem de erro ao submeter o formulário com um email com formatação inválida', function () {
@@ -120,13 +126,39 @@ describe('Central de Atendimento ao Cliente TAT', function () {
     cy.contains('Política de Privacidade').should('have.attr', 'target', '_blank')
   });
 
-  it.only('testa a página da política de privacidade de forma independente', () => {
+  it('testa a página da política de privacidade de forma independente', () => {
     cy.get('#privacy a')
       .invoke('removeAttr', 'target')
       .click()
-    
+
     cy.contains('CAC TAT - Política de privacidade')
   });
 
+  it('exibe e esconde as mensagens de sucesso e erro usando o .invoke', () => {
+    cy.get('.success')
+      .should('not.be.visible')
+      .invoke('show')
+      .should('be.visible')
+      .and('contain', 'Mensagem enviada com sucesso.')
+      .invoke('hide')
+      .should('not.be.visible')
+    cy.get('.error')
+      .should('not.be.visible')
+      .invoke('show')
+      .should('be.visible')
+      .and('contain', 'Valide os campos obrigatórios!')
+      .invoke('hide')
+      .should('not.be.visible')
+  })
+
+  it('faz uma requisição HTTP', function()  {
+    cy.request('https://cac-tat.s3.eu-central-1.amazonaws.com/index.html')
+      .should(function(response) {
+        const { status, statusText, body } = response
+        expect(status).to.equal(200)
+        expect(statusText).to.equal('OK')
+        expect(body).to.include('CAC TAT')
+      })
+  })
 
 })
