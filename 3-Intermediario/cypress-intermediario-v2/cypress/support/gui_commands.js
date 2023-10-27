@@ -57,3 +57,18 @@ Cypress.Commands.add('gui_createIssue', issue => {
   cy.get('input[type="submit"]').should('not.be.disabled').click()
 
 })
+
+Cypress.Commands.add('gui_createLabel', label => {
+  cy.visit(`http://localhost/root/${label.issue.project.name}/-/labels/new`)
+
+  cy.get('#label_title').type(label.title)
+  cy.get('#label_description').type(label.description)
+  cy.get('#label_color').type(`{selectAll}${label.color}`)
+  cy.contains('Create label').click()
+})
+
+Cypress.Commands.add('gui_setLabelOnIssue', label => {
+  cy.get('.qa-edit-link-labels').click()
+  cy.contains(label.name).click()
+  cy.get('body').click()
+})
