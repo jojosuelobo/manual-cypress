@@ -37,3 +37,9 @@ Anotações dos cursos de Automação com Cypress do [Walmyr Filho - Talking Abo
 - Geração de dados aleatórios para uso nos testes automatizados
 - Executar comandos à nível de sistema operacional
 - leitura de arquivos ( _cy.exec()_ )
+
+### 4: Cypress Avançado
+ [Repositório do curso](https://github.com/wlsf82/curso-cypress-avancado)
+
+### 5: Boas Práticas com Cypress
+[Repositório do curso](https://github.com/wlsf82/boas-praticas-em-automacao-de-testes-com-cypress-v2) 
