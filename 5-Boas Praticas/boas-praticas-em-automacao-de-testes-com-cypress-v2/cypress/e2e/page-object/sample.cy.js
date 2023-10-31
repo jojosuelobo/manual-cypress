@@ -15,7 +15,8 @@ describe('Page Object bad practice', () => {
       description: faker.random.words(5)
     }
 
-    editDestinationPage.updateInfo(info)
+    //editDestinationPage.updateInfo(info)
+    cy.updateInfo(info)
 
     cy.url()
       .should(
