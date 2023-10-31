@@ -43,3 +43,13 @@ Anotações dos cursos de Automação com Cypress do [Walmyr Filho - Talking Abo
 
 ### 5: Boas Práticas com Cypress
 [Repositório do curso](https://github.com/wlsf82/boas-praticas-em-automacao-de-testes-com-cypress-v2) 
+- _Browser testing_
+- Duplicação de código
+- _Flaky tests_
+- _Hardcoded assertions_
+- Complexidade desnecessária
+- _Page Objects_
+- Dados sensíveis versionados
+- Testes lentos
+- Dependência entre testes
+- Abstrações erradas
