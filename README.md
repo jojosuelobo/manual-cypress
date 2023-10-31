@@ -34,7 +34,7 @@ Padrão de `.gitignore` para projetos com `cypress`
 
 
 ### Estrutura de código
-```jsx
+```js
 /* Habilita o auto complete do Cypress */
 /// <reference types="cypress" />
 
@@ -43,7 +43,7 @@ a descrição da mesma, exemplo: Fluxo de registro de novo usuário */
 describe('TELA DE REGISTRO DE NOVO USUÁRIO', () => {
 /* Significa que irá executar está instrução antes de cada caso de teste */
 	beforeEach(() => {
-        cy.visit('https://www.site.com.br') // Entrar na URL do site
+            cy.visit('https://www.site.com.br') // Entrar na URL do site
 	    cy.contains('Registrar-se').click() // Clicar em registrar-se
 	})
 	
