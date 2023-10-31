@@ -1,7 +1,22 @@
-🚧 Em andamento para construção do ReadMe 🚧
+<p align="center">
+  <a>
+    <img src="./Doc/images/logoCypressLit.png" alt="Logo Cypress" height="150" width="150">
+  </a>
+  <h1 align="center">Manual Cypress</h1>
+</p>
+
+### 🎯 Guia de documentação pessoal para o uso da ferramenta Cypress 
+
+> Este repositório tem o intuito de salvar e documentar de forma simples projetos e códigos em Cypress, sinta-se livre para consultar e contribuir com o projeto 
+
+### 🚨 Colabore
+
+- Abra Pull Requests com atualizações
+- Discuta ideias em Issues
+- Compartilhe o repositório com a sua comunidade
 
 ### [Anotações dos cursos](./Doc/cypressTAT_Documentation.md) de Automação com Cypress 
-Anotações feitas dos cursos de automação e testes em Cypress do [Walmyr Filho - Talking About Testing](https://github.com/wlsf82)
+> Anotações feitas dos cursos de automação e testes em Cypress do [Walmyr Filho - Talking About Testing](https://github.com/wlsf82)
 
 ### Definição
 
