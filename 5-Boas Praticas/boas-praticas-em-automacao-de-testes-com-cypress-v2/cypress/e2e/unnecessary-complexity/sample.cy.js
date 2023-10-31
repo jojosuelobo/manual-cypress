@@ -20,4 +20,14 @@ describe('Unnecessary complexity bad practice', () => {
         .should('be.checked')
     })
   })
+
+  // Resolução simplista
+  Cypress._.times(5, () => {
+    it('checks the checkbox only if not checked - Simple', () => {
+      cy.get('#agree')
+        .check()
+        .should('be.checked')
+    })
+  })
+
 })
