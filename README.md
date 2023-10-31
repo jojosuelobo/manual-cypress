@@ -1,55 +1,89 @@
 🚧 Em andamento para construção do ReadMe 🚧
 
-Anotações dos cursos de Automação com Cypress do [Walmyr Filho - Talking About Testing](https://github.com/wlsf82)
+### [Anotações dos cursos](./Doc/cypressTAT_Documentation.md) de Automação com Cypress 
+Anotações feitas dos cursos de automação e testes em Cypress do [Walmyr Filho - Talking About Testing](https://github.com/wlsf82)
 
-### 1: Testes end-to-end com Cypress
-[Repositório do curso](https://github.com/wlsf82/testes-e2e-com-cypress-v2)
-- Como testar recebimento de e-mails
-- Como proteger dados sensíveis
-- Como armazenar a sessão do usuário no cache para otimizar o processo de autenticação
-- testes e2e para **Sign up**, **Login**, **CRUD**
-- upload de arquivos
-- interceptar requisições para tornar os testes mais robustos
-- Como testar a responsividade da aplicação
-- Cypress Cloud
+### Definição
 
-### 2: Cypress básico
-[Repositório do curso](https://github.com/wlsf82/cypress-basico-v2)
- - Visitar páginas locais e remotas
- - Upload de arquivos
- - Comandos customizados
- - lidar com links que abrem em outra aba do navegador
- - Pipeline de integração contínua (Github Actions)
- - Lodesh
+O [Cypress.io](http://cypress.io/) é um framework de testes automatizados end-to-end usando JavaScript! Para seu uso, é necessário a [~~instalação do Node e npm.~~]() 
 
- ### 3: Cypress Intermediário
- [Repositório do curso]( https://github.com/wlsf82/cypress-intermediario-v2)
-- Criar testes automatizados de interface gráfica de usuário
-- Criar testes automatizados de API (com _feedback_ visual no navegador)
-- Testar APIs que necessitam um _token_ de acesso
-- Como criar testes otimizados e direto-ao-ponto
-- Salvar a sessão do usuário no navegador para posterior restauração
-- Validar se a sessão do usuário ainda é válida e como lidar com isso quando a mesma é invalidada
-- Limpeza e criação da massa de dados antes do teste começar
-- Como proteger dados sensíveis, tais como senhas e _tokens_ de acesso
-- Organizar os testes e comandos customizados em diferentes "camadas" (_API, CLI, GUI_)
-- Estruturar os testes pensando em pré-condições, ações e resultados esperados
-- Geração de dados aleatórios para uso nos testes automatizados
-- Executar comandos à nível de sistema operacional
-- leitura de arquivos ( _cy.exec()_ )
 
-### 4: Cypress Avançado
- [Repositório do curso](https://github.com/wlsf82/curso-cypress-avancado)
+### Como criar um projeto em Cypress
 
-### 5: Boas Práticas com Cypress
-[Repositório do curso](https://github.com/wlsf82/boas-praticas-em-automacao-de-testes-com-cypress-v2) 
-- _Browser testing_
-- Duplicação de código
-- _Flaky tests_
-- _Hardcoded assertions_
-- Complexidade desnecessária
-- _Page Objects_
-- Dados sensíveis versionados
-- Testes lentos
-- Dependência entre testes
-- Abstrações erradas
+##### 1. Criar arquivo Package.json
+```markdown
+npm init --yes
+```
+
+##### 2. Instalar sua dependência
+```markdown
+npm install -D cypress
+```
+
+Caso queria uma versão específica, basta adicionar a versão, exempo: `npm i cypress@4.1` Após sua instalação, é possivel usar o comando `npx cypress open` para abrir o dashboard de testes, e o comando `npx cypress run` para executar o relatório de testes.
+
+### [~~Ferramentas de report do Cypress~~]()
+Existem outras ferramentas e pacotes que auxiliam em relatórios de testes, que podem ser executadas junto ao cypress.
+
+### [.gitignore para o Cypress](./Doc/gitignore_cypress.md)
+Padrão de `.gitignore` para projetos com `cypress`
+
+### Como fazer uma entrega contínua com Cypress
+- Modelo de integração [~~Github~~]()
+- Modelo `yml` para [bitbucket](./Doc/bitbucket.md)
+
+
+### Estrutura de código
+```jsx
+/* Habilita o auto complete do Cypress */
+/// <reference types="cypress" />
+
+/* Funciona como o 'Main' do código, dentro dele que estarão todos os testes referentes
+a descrição da mesma, exemplo: Fluxo de registro de novo usuário */
+describe('TELA DE REGISTRO DE NOVO USUÁRIO', () => {
+/* Significa que irá executar está instrução antes de cada caso de teste */
+	beforeEach(() => {
+        cy.visit('https://www.site.com.br') // Entrar na URL do site
+	    cy.contains('Registrar-se').click() // Clicar em registrar-se
+	})
+	
+/* Um sub 'Main', onde os testes deste contexto especificos são feitos*/
+	context('Registro de usuário inválido' , () => {
+		/* Teste em si deste caso em especifico */
+		it('Verifica ap-vmessages', () => { 
+			[...]
+		})
+
+		it('Checa mensagens de erro de input Email', () => { 
+			[...]
+		})
+
+		[...]
+	})
+
+	context('Registro de usuário VÁLIDO' , () => {
+		/* Teste em si deste caso em especifico */
+		it('Cadastro de usuário', () => { 
+			[...]
+		})
+	})
+	
+})
+```
+
+### [Principais Conceitos](./Doc/principais_Conceitos.md)
+Conceitos básicos para o uso do Cypress.
+- Criação de funções globais
+- Importar arquivos JSON (Ou variáveis globais)
+- Dicas de Tag de um component
+
+### [Estruturas padrões com Cypress](./Doc/estruturas_Padrao.md)
+
+- Checar alert de uma página
+- Como fazer uma requisição WEB
+
+### [Dicas e boas práticas com Cypress](./Doc/dicas_Cypress.md)
+
+- Como usar o `.as()` para reutilização e otimização
+
+
