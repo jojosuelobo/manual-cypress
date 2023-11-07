@@ -52,7 +52,7 @@ Existem outras ferramentas e pacotes que auxiliam em relatórios de testes, que 
 Padrão de `.gitignore` para projetos com `cypress`
 
 ### [~~Entrega contínua com Cypress~~]()
-- Modelo de integração [~~Github~~]()
+- Modelo de integração [Github](./Doc/doc_ci/github.md)
 - Modelo `yml` para [bitbucket](./Doc/doc_ci/bitbucket.md)
 
 
