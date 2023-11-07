@@ -1,6 +1,6 @@
 <p align="center">
   <a>
-    <img src="./doc/images/logoCypressLit.png" alt="Logo Cypress" height="150" width="150">
+    <img src="./Doc/images/logoCypressLit.png" alt="Logo Cypress" height="150" width="150">
   </a>
   <h1 align="center">Manual Cypress</h1>
 </p>
@@ -46,14 +46,14 @@ Caso queria uma versão específica, basta adicionar a versão, exempo: `npm i c
 
 ### [~~Ferramentas de report do Cypress~~]()
 Existem outras ferramentas e pacotes que auxiliam em relatórios de testes, que podem ser executadas junto ao cypress. Dentra elas:
-* [Mochawesome](./doc/doc_report/mochawesome.md)
+* [Mochawesome](./Doc/doc_report/mochawesome.md)
 
-### [.gitignore para o Cypress](./doc/gitignore_cypress.md)
+### [.gitignore para o Cypress](./Doc/gitignore_cypress.md)
 Padrão de `.gitignore` para projetos com `cypress`
 
 ### [~~Entrega contínua com Cypress~~]()
 - Modelo de integração [~~Github~~]()
-- Modelo `yml` para [bitbucket](./doc/doc_ci/bitbucket.md)
+- Modelo `yml` para [bitbucket](./Doc/doc_ci/bitbucket.md)
 
 
 
