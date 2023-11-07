@@ -90,7 +90,7 @@ Gerou? Se sim, agora é só comemorar ⚡️
 Dicas extras:
 
 1. Você pode criar scripts no package.json com os comandos usados para gerar o relatório, exemplo: ``"cy:run:rel": "npx cypress run & npx mochawesome-merge > reportMocha.json & npx marge reportMocha.json"``
-2. Você pode adicionar um script para apagar os arquivos gerados (pasta do mocha, arquivo com a mesclagem)
+2. Você pode adicionar um script para apagar os arquivos gerados (pasta do mocha, arquivo com a mesclagem), exemplo: ``"del:mocha": "del reportMocha.json & rmdir /s mochawesome-report"``
 3. Esses arquivos não precisam ser versionados, você pode adicioná-los no `.gitignore`
 
 By [samlucax](https://gist.github.com/samlucax/170df8193d0b96184dcf9daaba1c8cd5#instalando-as-depend%C3%AAncias)
