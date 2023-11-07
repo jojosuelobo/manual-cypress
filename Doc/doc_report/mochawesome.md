@@ -93,4 +93,13 @@ Dicas extras:
 2. Você pode adicionar um script para apagar os arquivos gerados (pasta do mocha, arquivo com a mesclagem), exemplo: ``"del:mocha": "del reportMocha.json & rmdir /s mochawesome-report"``
 3. Esses arquivos não precisam ser versionados, você pode adicioná-los no `.gitignore`
 
+Scripts padrões que podem ser usados resaltando as dicas dada:
+```json
+"scripts": {
+  "cy:run": "npx cypress run",
+  "cy:mocha:run": "del reportMocha.json & rmdir /s mochawesome-report",
+  "postcy:mocha:run": "npx cypress run & npx mochawesome-merge > reportMocha.json & npx marge reportMocha.json"
+},
+```
+
 By [samlucax](https://gist.github.com/samlucax/170df8193d0b96184dcf9daaba1c8cd5#instalando-as-depend%C3%AAncias)
