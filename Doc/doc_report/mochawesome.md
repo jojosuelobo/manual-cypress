@@ -102,4 +102,6 @@ Scripts padrões que podem ser usados resaltando as dicas dada:
 },
 ```
 
+Versão 2.0: https://github.com/LironEr/cypress-mochawesome-reporter
+
 By [samlucax](https://gist.github.com/samlucax/170df8193d0b96184dcf9daaba1c8cd5#instalando-as-depend%C3%AAncias)
